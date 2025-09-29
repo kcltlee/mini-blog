@@ -2,6 +2,7 @@ from project.app import db
 
 # generate new schema
 
+
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
@@ -12,4 +13,4 @@ class Post(db.Model):
         self.text = text
 
     def __repr__(self):
-        return f'<title {self.title}>'
+        return f"<title {self.title}>"
