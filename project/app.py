@@ -17,12 +17,14 @@ USERNAME = "admin"
 PASSWORD = "admin"
 SECRET_KEY = "change_me"
 
-url = os.getenv('postgresql://ece444_deploy_dbtest_6ug3_user:oIHKev3nuUqwTCaGPbAib4UWutpzERfc@dpg-d3d0d98gjchc739jcdc0-a.oregon-postgres.render.com/ece444_deploy_dbtest_6ug3', f'sqlite:///{Path(basedir).joinpath(DATABASE)}')
+url = os.getenv('DATABASE_URL', f'sqlite:///{Path(basedir).joinpath(DATABASE)}')
 
 if url.startswith("postgres://"):
     url = url.replace("postgres://", "postgresql://", 1)
 
 SQLALCHEMY_DATABASE_URI = url
+print("Database URL:", SQLALCHEMY_DATABASE_URI)
+
 
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
