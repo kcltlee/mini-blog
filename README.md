@@ -1,4 +1,7 @@
-# mini-blog
+# ECE444 Lab 3 - mini-blog
+
+Run and interpret unit tests for a Flask application to verify functionality. 
+Deploy web applications using industry-standard tools and practices. 
 
 Flaskr & Test-Driven Deplyment (TDD)
 
